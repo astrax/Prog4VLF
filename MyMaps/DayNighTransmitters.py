@@ -47,7 +47,7 @@ v,w = map(tunis_lon, tunis_lat)
 map.plot(x, y, 'ro', markersize=10, label='VLF Transmitter')
 map.plot(v, w, 'bo', markersize=10, label='VLF Reciever')
 for label, xpt, ypt in zip(labels, x, y):
-    plt.text(xpt+10000, ypt+5000, label, color='k',fontsize=14, fontweight='bold')
+    plt.text(xpt+10000, ypt+5000, label, color='k',fontsize=12, fontweight='bold')
 
 for wpt, vpt, xpt, ypt in zip(tunlon, tunlat, lons, lats):
     # draw great circle route between tunisia and vlf trx
