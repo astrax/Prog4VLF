@@ -19,12 +19,14 @@ map.drawmapboundary(fill_color='lightblue')
 map.fillcontinents(color='#FFFFFF',lake_color='lightblue')
 map.drawparallels(np.arange(-90,100,30),labels=[1,0,0,0],color='#A1A866', linewidth=.2)
 map.drawmeridians(np.arange(map.lonmin,map.lonmax+40,60),labels=[0,0,0,1],color='#A1A866', linewidth=.2)
- 
-
+WWLLN_lons=014.1805
+WWLLN_lats=36.7364
+x,y = map(WWLLN_lons, WWLLN_lats)
 v,w = map(tunis_lon, tunis_lat)
 
 map.plot(v, w, 'bo', markersize=10, label='VLF Reciever')
 plt.text(v, w, "Tunis", color='k',fontsize=12, fontweight='bold')
+map.plot(x, y, 'ro', markersize=10, label='VLF WWLLN flash')
  
 # shade the night areas, with alpha transparency so the
 # map shows through. Use current time in UTC.
@@ -45,7 +47,7 @@ from circles import circle
 from shapely.geometry import Polygon, Point
 from descartes import PolygonPatch
 
-radius = 6000
+radius = 328
 centerlon = tunis_lon
 centerlat = tunis_lat
 
