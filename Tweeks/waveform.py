@@ -61,7 +61,7 @@ Time2=np.linspace(0, len(signal2)/fs2, num=len(signal2))
 Plot signals
 '''
 
-plt.figure(figsize=(10, 7), facecolor='white',dpi=100)
+plt.figure(figsize=(7, 4), facecolor='white',dpi=100)
 plt.plot(Time1,signal1, linewidth=3,label=CH1 )
 plt.plot(Time1,signal2, linewidth=3,label=CH2 )
 
