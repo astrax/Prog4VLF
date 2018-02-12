@@ -1,1 +1,0 @@
-Based on matplotlib **basemap** toolkit
